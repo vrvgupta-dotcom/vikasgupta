@@ -12,14 +12,6 @@ img { max-width: 100%; }
 
 .vg-container { max-width: 1320px; margin: 0 auto; }
 
-.books-scroll {
-  display: flex; gap: 28px; overflow-x: auto; padding: 0 72px 12px;
-  scrollbar-width: thin; scrollbar-color: #C8A07050 transparent;
-}
-.books-scroll::-webkit-scrollbar { height: 2px; }
-.books-scroll::-webkit-scrollbar-track { background: transparent; }
-.books-scroll::-webkit-scrollbar-thumb { background: #C8601A40; }
-
 @keyframes heroLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes heroFade { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 .vg-fade { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -119,15 +111,17 @@ img { max-width: 100%; }
 .vg-trilogy-last { margin-bottom: 32px; }
 .vg-trilogy-header { padding: 0 72px; margin-bottom: 32px; display: flex; align-items: center; gap: 20px; max-width: 1320px; margin-left: auto; margin-right: auto; }
 .vg-trilogy-header div { flex: 1; height: 1px; }
-.vg-trilogy-header span { font-family: 'Cormorant SC', serif; font-size: 11px; letter-spacing: 0.3em; white-space: nowrap; font-weight: 400; }
+.vg-trilogy-header span, .vg-trilogy-header .vg-trilogy-link { font-family: 'Cormorant SC', serif; font-size: 11px; letter-spacing: 0.3em; white-space: nowrap; font-weight: 400; transition: opacity 0.2s; }
+.vg-trilogy-link:hover { opacity: 0.7; }
 .vg-trilogy-header-gold div { background: rgba(200,160,48,0.3); }
-.vg-trilogy-header-gold span { color: #C9A030; }
+.vg-trilogy-header-gold span, .vg-trilogy-header-gold .vg-trilogy-link { color: #C9A030; }
 .vg-trilogy-header-orange div { background: rgba(200,96,26,0.25); }
-.vg-trilogy-header-orange span { color: #C8601A; }
+.vg-trilogy-header-orange span, .vg-trilogy-header-orange .vg-trilogy-link { color: #C8601A; }
 
-.vg-trilogy-book { flex-shrink: 0; display: flex; flex-direction: column; gap: 14px; width: 220px; }
+.vg-trilogy-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; padding: 0 72px; max-width: 1320px; margin: 0 auto; }
+.vg-trilogy-book { display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: inherit; }
 .vg-trilogy-book img {
-  width: 220px; height: auto; display: block;
+  width: 100%; height: auto; display: block;
   box-shadow: 6px 10px 32px rgba(26,18,8,0.15); transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .vg-trilogy-book img:hover { transform: translateY(-5px); box-shadow: 8px 16px 44px rgba(26,18,8,0.22); }
@@ -204,7 +198,8 @@ img { max-width: 100%; }
   #vg-nav { padding: 0 24px; }
   .vg-nav-links { gap: 20px; }
   .vg-hero, .vg-about, .vg-focus, .vg-speaking, .vg-contact { padding-left: 24px; padding-right: 24px; }
-  .vg-books-head, .vg-standalone, .vg-trilogy-header, .books-scroll { padding-left: 24px; padding-right: 24px; }
+  .vg-books-head, .vg-standalone, .vg-trilogy-header, .vg-trilogy-grid { padding-left: 24px; padding-right: 24px; }
+  .vg-trilogy-grid { grid-template-columns: 1fr; }
   .vg-hero-inner { grid-template-columns: 1fr; gap: 48px; }
   .vg-hero-name-first { font-size: 88px; }
   .vg-hero-name-last { font-size: 56px; }
