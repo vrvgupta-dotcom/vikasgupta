@@ -6,11 +6,12 @@ writer, and author of the *AI Trilogy* and *AI and India Trilogy*.
 ## Structure
 
 ```
-index.html            Single-page site (hero, about, works, focus, speaking, contact)
-assets/css/styles.css  Styles
-assets/js/main.js      Nav scroll state + scroll-in animations
-assets/images/         Book cover art
-assets/favicon.svg     Site favicon
+index.html     Single-page site (hero, works, about, focus, speaking, contact)
+styles.css     Styles
+script.js      Nav scroll state + scroll-in animations
+images/        Book cover art
+favicon.svg    Site favicon
+CNAME          GitHub Pages custom domain (author.vikasgupta.world)
 ```
 
 ## Running locally
@@ -32,7 +33,7 @@ Vercel, or any static host — just point it at the repository root.
 ## Content
 
 - **Contact**: `hello@vikasgupta.world` and LinkedIn are wired as real links.
-- **Buy on Amazon** links on each book are placeholders (`#`) — replace with
-  the live Amazon listing URLs when available.
+- **The AI Trilogy** and **The AI and India Trilogy** link out to
+  `aitrilogy.vikasgupta.world` and `aiimpact.vikasgupta.world`.
 - **Speaking & Media** section ships with placeholder cards; replace them
   with real talks, articles, and press mentions as they come in.
